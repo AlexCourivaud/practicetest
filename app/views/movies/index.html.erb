@@ -1,0 +1,13 @@
+ça c'est l'index des movies
+    <div class="col-12 col-md-6 offset-lg-3">
+<% @movies.each do |movie|%>
+    <div class="card m-2">
+<%= movie.id %>-<%= movie.title %>
+<div class="bg-white rounded p-3 shadow"> <%= movie.overview  %>  </div>
+
+
+<%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top" %>
+</div>
+<% end %>
+</div>
+<%= link_to "retour à la home page", root_path %>
